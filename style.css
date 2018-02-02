@@ -1,0 +1,632 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.myGrid1 {
+  width: 100%; }
+  .myGrid1:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.myGrid1-columnItem, .myGrid1-col1, .myGrid1-col2 {
+  margin-left: 2px;
+  margin-right: 2px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 30px;
+  background-color: lightblue; }
+
+.myGrid1-columnItem:first-of-type, .myGrid1-col1:first-of-type, .myGrid1-col2:first-of-type {
+  margin-left: 0px; }
+
+.myGrid1-columnItem:last-of-type, .myGrid1-col1:last-of-type, .myGrid1-col2:last-of-type {
+  margin-right: 0px; }
+
+.myGrid1-col1 {
+  width: calc((1/2 * 100%) - ((4px * 1) / 2)); }
+
+.myGrid1-col1:after {
+  content: "1/2"; }
+
+.myGrid1-col1:hover {
+  background-color: grey; }
+
+.myGrid1-col2 {
+  width: calc((1/2 * 100%) - ((4px * 1) / 2)); }
+
+.myGrid1-col2:after {
+  content: "1/2"; }
+
+.myGrid1-col2:hover {
+  background-color: grey; }
+
+.myGrid2 {
+  width: 100%; }
+  .myGrid2:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.myGrid2-columnItem, .myGrid2-col1, .myGrid2-col2, .myGrid2-col3, .myGrid2-col4 {
+  margin-left: 2px;
+  margin-right: 2px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 30px;
+  background-color: lightyellow; }
+
+.myGrid2-columnItem:first-of-type, .myGrid2-col1:first-of-type, .myGrid2-col2:first-of-type, .myGrid2-col3:first-of-type, .myGrid2-col4:first-of-type {
+  margin-left: 0px; }
+
+.myGrid2-columnItem:last-of-type, .myGrid2-col1:last-of-type, .myGrid2-col2:last-of-type, .myGrid2-col3:last-of-type, .myGrid2-col4:last-of-type {
+  margin-right: 0px; }
+
+.myGrid2-col1 {
+  width: calc((1/4 * 100%) - ((4px * 3) / 4)); }
+
+.myGrid2-col1:after {
+  content: "1/4"; }
+
+.myGrid2-col1:hover {
+  background-color: grey; }
+
+.myGrid2-col2 {
+  width: calc((1/4 * 100%) - ((4px * 3) / 4)); }
+
+.myGrid2-col2:after {
+  content: "1/4"; }
+
+.myGrid2-col2:hover {
+  background-color: grey; }
+
+.myGrid2-col3 {
+  width: calc((1/4 * 100%) - ((4px * 3) / 4)); }
+
+.myGrid2-col3:after {
+  content: "1/4"; }
+
+.myGrid2-col3:hover {
+  background-color: grey; }
+
+.myGrid2-col4 {
+  width: calc((1/4 * 100%) - ((4px * 3) / 4)); }
+
+.myGrid2-col4:after {
+  content: "1/4"; }
+
+.myGrid2-col4:hover {
+  background-color: grey; }
+
+.myGrid3 {
+  width: 100%; }
+  .myGrid3:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.myGrid3-columnItem, .myGrid3-col1, .myGrid3-col2, .myGrid3-col3, .myGrid3-col4, .myGrid3-col5, .myGrid3-col6, .myGrid3-col7, .myGrid3-col8 {
+  margin-left: 2px;
+  margin-right: 2px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 30px;
+  background-color: lightsalmon; }
+
+.myGrid3-columnItem:first-of-type, .myGrid3-col1:first-of-type, .myGrid3-col2:first-of-type, .myGrid3-col3:first-of-type, .myGrid3-col4:first-of-type, .myGrid3-col5:first-of-type, .myGrid3-col6:first-of-type, .myGrid3-col7:first-of-type, .myGrid3-col8:first-of-type {
+  margin-left: 0px; }
+
+.myGrid3-columnItem:last-of-type, .myGrid3-col1:last-of-type, .myGrid3-col2:last-of-type, .myGrid3-col3:last-of-type, .myGrid3-col4:last-of-type, .myGrid3-col5:last-of-type, .myGrid3-col6:last-of-type, .myGrid3-col7:last-of-type, .myGrid3-col8:last-of-type {
+  margin-right: 0px; }
+
+.myGrid3-col1 {
+  width: calc((1/8 * 100%) - ((4px * 7) / 8)); }
+
+.myGrid3-col1:after {
+  content: "1/8"; }
+
+.myGrid3-col1:hover {
+  background-color: grey; }
+
+.myGrid3-col2 {
+  width: calc((1/8 * 100%) - ((4px * 7) / 8)); }
+
+.myGrid3-col2:after {
+  content: "1/8"; }
+
+.myGrid3-col2:hover {
+  background-color: grey; }
+
+.myGrid3-col3 {
+  width: calc((1/8 * 100%) - ((4px * 7) / 8)); }
+
+.myGrid3-col3:after {
+  content: "1/8"; }
+
+.myGrid3-col3:hover {
+  background-color: grey; }
+
+.myGrid3-col4 {
+  width: calc((1/8 * 100%) - ((4px * 7) / 8)); }
+
+.myGrid3-col4:after {
+  content: "1/8"; }
+
+.myGrid3-col4:hover {
+  background-color: grey; }
+
+.myGrid3-col5 {
+  width: calc((1/8 * 100%) - ((4px * 7) / 8)); }
+
+.myGrid3-col5:after {
+  content: "1/8"; }
+
+.myGrid3-col5:hover {
+  background-color: grey; }
+
+.myGrid3-col6 {
+  width: calc((1/8 * 100%) - ((4px * 7) / 8)); }
+
+.myGrid3-col6:after {
+  content: "1/8"; }
+
+.myGrid3-col6:hover {
+  background-color: grey; }
+
+.myGrid3-col7 {
+  width: calc((1/8 * 100%) - ((4px * 7) / 8)); }
+
+.myGrid3-col7:after {
+  content: "1/8"; }
+
+.myGrid3-col7:hover {
+  background-color: grey; }
+
+.myGrid3-col8 {
+  width: calc((1/8 * 100%) - ((4px * 7) / 8)); }
+
+.myGrid3-col8:after {
+  content: "1/8"; }
+
+.myGrid3-col8:hover {
+  background-color: grey; }
+
+.myGrid4 {
+  width: 100%; }
+  .myGrid4:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.myGrid4-columnItem, .myGrid4-col1, .myGrid4-col2, .myGrid4-col3, .myGrid4-col4, .myGrid4-col5, .myGrid4-col6, .myGrid4-col7, .myGrid4-col8, .myGrid4-col9, .myGrid4-col10, .myGrid4-col11, .myGrid4-col12 {
+  margin-left: 2px;
+  margin-right: 2px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 30px;
+  background-color: lightpink; }
+
+.myGrid4-columnItem:first-of-type, .myGrid4-col1:first-of-type, .myGrid4-col2:first-of-type, .myGrid4-col3:first-of-type, .myGrid4-col4:first-of-type, .myGrid4-col5:first-of-type, .myGrid4-col6:first-of-type, .myGrid4-col7:first-of-type, .myGrid4-col8:first-of-type, .myGrid4-col9:first-of-type, .myGrid4-col10:first-of-type, .myGrid4-col11:first-of-type, .myGrid4-col12:first-of-type {
+  margin-left: 0px; }
+
+.myGrid4-columnItem:last-of-type, .myGrid4-col1:last-of-type, .myGrid4-col2:last-of-type, .myGrid4-col3:last-of-type, .myGrid4-col4:last-of-type, .myGrid4-col5:last-of-type, .myGrid4-col6:last-of-type, .myGrid4-col7:last-of-type, .myGrid4-col8:last-of-type, .myGrid4-col9:last-of-type, .myGrid4-col10:last-of-type, .myGrid4-col11:last-of-type, .myGrid4-col12:last-of-type {
+  margin-right: 0px; }
+
+.myGrid4-col1 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col1:after {
+  content: "1/12"; }
+
+.myGrid4-col1:hover {
+  background-color: grey; }
+
+.myGrid4-col2 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col2:after {
+  content: "1/12"; }
+
+.myGrid4-col2:hover {
+  background-color: grey; }
+
+.myGrid4-col3 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col3:after {
+  content: "1/12"; }
+
+.myGrid4-col3:hover {
+  background-color: grey; }
+
+.myGrid4-col4 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col4:after {
+  content: "1/12"; }
+
+.myGrid4-col4:hover {
+  background-color: grey; }
+
+.myGrid4-col5 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col5:after {
+  content: "1/12"; }
+
+.myGrid4-col5:hover {
+  background-color: grey; }
+
+.myGrid4-col6 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col6:after {
+  content: "1/12"; }
+
+.myGrid4-col6:hover {
+  background-color: grey; }
+
+.myGrid4-col7 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col7:after {
+  content: "1/12"; }
+
+.myGrid4-col7:hover {
+  background-color: grey; }
+
+.myGrid4-col8 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col8:after {
+  content: "1/12"; }
+
+.myGrid4-col8:hover {
+  background-color: grey; }
+
+.myGrid4-col9 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col9:after {
+  content: "1/12"; }
+
+.myGrid4-col9:hover {
+  background-color: grey; }
+
+.myGrid4-col10 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col10:after {
+  content: "1/12"; }
+
+.myGrid4-col10:hover {
+  background-color: grey; }
+
+.myGrid4-col11 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col11:after {
+  content: "1/12"; }
+
+.myGrid4-col11:hover {
+  background-color: grey; }
+
+.myGrid4-col12 {
+  width: calc((1/12 * 100%) - ((4px * 11) / 12)); }
+
+.myGrid4-col12:after {
+  content: "1/12"; }
+
+.myGrid4-col12:hover {
+  background-color: grey; }
+
+.myGrid5 {
+  width: 100%; }
+  .myGrid5:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.myGrid5-columnItem, .myGrid5-col1, .myGrid5-col2, .myGrid5-col3 {
+  margin-left: 2px;
+  margin-right: 2px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 30px;
+  background-color: #e7c6c6; }
+
+.myGrid5-columnItem:first-of-type, .myGrid5-col1:first-of-type, .myGrid5-col2:first-of-type, .myGrid5-col3:first-of-type {
+  margin-left: 0px; }
+
+.myGrid5-columnItem:last-of-type, .myGrid5-col1:last-of-type, .myGrid5-col2:last-of-type, .myGrid5-col3:last-of-type {
+  margin-right: 0px; }
+
+.myGrid5-col1 {
+  width: calc((2/4 * 100%) - ((4px * 2) / 3)); }
+
+.myGrid5-col1:after {
+  content: "2/4"; }
+
+.myGrid5-col1:hover {
+  background-color: grey; }
+
+.myGrid5-col2 {
+  width: calc((1/4 * 100%) - ((4px * 2) / 3)); }
+
+.myGrid5-col2:after {
+  content: "1/4"; }
+
+.myGrid5-col2:hover {
+  background-color: grey; }
+
+.myGrid5-col3 {
+  width: calc((1/4 * 100%) - ((4px * 2) / 3)); }
+
+.myGrid5-col3:after {
+  content: "1/4"; }
+
+.myGrid5-col3:hover {
+  background-color: grey; }
+
+.myGrid6 {
+  width: 100%; }
+  .myGrid6:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.myGrid6-columnItem, .myGrid6-col1, .myGrid6-col2, .myGrid6-col3 {
+  margin-left: 2px;
+  margin-right: 2px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 30px;
+  background-color: #ee91de; }
+
+.myGrid6-columnItem:first-of-type, .myGrid6-col1:first-of-type, .myGrid6-col2:first-of-type, .myGrid6-col3:first-of-type {
+  margin-left: 0px; }
+
+.myGrid6-columnItem:last-of-type, .myGrid6-col1:last-of-type, .myGrid6-col2:last-of-type, .myGrid6-col3:last-of-type {
+  margin-right: 0px; }
+
+.myGrid6-col1 {
+  width: calc((1/4 * 100%) - ((4px * 2) / 3)); }
+
+.myGrid6-col1:after {
+  content: "1/4"; }
+
+.myGrid6-col1:hover {
+  background-color: grey; }
+
+.myGrid6-col2 {
+  width: calc((2/4 * 100%) - ((4px * 2) / 3)); }
+
+.myGrid6-col2:after {
+  content: "2/4"; }
+
+.myGrid6-col2:hover {
+  background-color: grey; }
+
+.myGrid6-col3 {
+  width: calc((1/4 * 100%) - ((4px * 2) / 3)); }
+
+.myGrid6-col3:after {
+  content: "1/4"; }
+
+.myGrid6-col3:hover {
+  background-color: grey; }
+
+.myGrid7 {
+  width: 100%; }
+  .myGrid7:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.myGrid7-columnItem, .myGrid7-col1, .myGrid7-col2, .myGrid7-col3, .myGrid7-col4, .myGrid7-col5 {
+  margin-left: 2px;
+  margin-right: 2px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  min-height: 30px;
+  background-color: lightblue; }
+
+.myGrid7-columnItem:first-of-type, .myGrid7-col1:first-of-type, .myGrid7-col2:first-of-type, .myGrid7-col3:first-of-type, .myGrid7-col4:first-of-type, .myGrid7-col5:first-of-type {
+  margin-left: 0px; }
+
+.myGrid7-columnItem:last-of-type, .myGrid7-col1:last-of-type, .myGrid7-col2:last-of-type, .myGrid7-col3:last-of-type, .myGrid7-col4:last-of-type, .myGrid7-col5:last-of-type {
+  margin-right: 0px; }
+
+.myGrid7-col1 {
+  width: calc((2/8 * 100%) - ((4px * 4) / 5)); }
+
+.myGrid7-col1:after {
+  content: "2/8"; }
+
+.myGrid7-col1:hover {
+  background-color: grey; }
+
+.myGrid7-col2 {
+  width: calc((1/8 * 100%) - ((4px * 4) / 5)); }
+
+.myGrid7-col2:after {
+  content: "1/8"; }
+
+.myGrid7-col2:hover {
+  background-color: grey; }
+
+.myGrid7-col3 {
+  width: calc((2/8 * 100%) - ((4px * 4) / 5)); }
+
+.myGrid7-col3:after {
+  content: "2/8"; }
+
+.myGrid7-col3:hover {
+  background-color: grey; }
+
+.myGrid7-col4 {
+  width: calc((1/8 * 100%) - ((4px * 4) / 5)); }
+
+.myGrid7-col4:after {
+  content: "1/8"; }
+
+.myGrid7-col4:hover {
+  background-color: grey; }
+
+.myGrid7-col5 {
+  width: calc((2/8 * 100%) - ((4px * 4) / 5)); }
+
+.myGrid7-col5:after {
+  content: "2/8"; }
+
+.myGrid7-col5:hover {
+  background-color: grey; }
+
+/*# sourceMappingURL=style.css.map */

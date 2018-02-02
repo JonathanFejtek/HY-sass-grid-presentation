@@ -1,0 +1,113 @@
+@import "utils";
+
+// a helper so we can see our columns!!!
+@mixin testColumn($bgColor){
+    border-style : solid;
+    border-width : 1px;
+    min-height: 30px;
+    background-color : $bgColor;
+}
+
+// the mixin 'createFloatGrid' takes 5 arguments:
+//      1) $gridName : the name of the grid you'd like to generate
+//      2) $width : the width of the grid
+//      3) $divisionList : a list of ratios that correspond to the widths of the grid columns
+//          ex. ("1/6 2/6 3/6")
+//      4) $gutterWidth : the width of gutters in the grid
+//      5) (optional) $bgColor : the background color for columns in the grid
+@mixin createFloatGrid($gridName,$width,$divisionList,$gutterWidth,$bgColor:none){
+
+    // split a string of ratios / fractions separated by ' ' into an array of ratios
+    $ratios : str-split($divisionList," ");
+
+    // class for container
+    .#{$gridName}{
+        width : $width;
+        @include clearfix();
+    }
+
+    // styles that apply to ALL columns of grid
+    .#{$gridName}-columnItem{
+        margin-left : $gutterWidth/2;
+        margin-right : $gutterWidth/2;
+        float : left;
+        @include testColumn($bgColor);
+    }
+
+    // style for first column of grid -- remove left margin
+    .#{$gridName}-columnItem:first-of-type{
+        margin-left : 0px;
+    }
+
+    // style for the last column of grid -- remove right margin
+    .#{$gridName}-columnItem:last-of-type{
+        margin-right : 0px;
+    }
+
+    // create a counter to number our columns
+    $i : 1;
+    // the number of columns is the length of the array of ratios we provide as a string
+    $numColumns : length($ratios);
+    // for every ratio in our list of ratios
+    @each $ratio in $ratios{
+        // create a CSS class called $gridName-col{$i}
+        .#{$gridName}-col#{$i}{
+            // width = (ratio * 100%) - ((gutterwidth * number of gutters) / number of columns)
+            width: calc((#{$ratio} * 100%) - ((#{$gutterWidth} * #{$numColumns - 1}) / #{$numColumns}));
+            @extend .#{$gridName}-columnItem;     
+        }
+        // apply some psuedo selectors!!!
+        .#{$gridName}-col#{$i}:after{
+            content : $ratio;
+        }
+
+        .#{$gridName}-col#{$i}:hover{
+            background-color : grey;
+        }
+
+        $i : $i+1;
+    }
+}
+
+
+
+
+
+//-----------------------------------------------
+
+
+//global gutter width variable
+$gw : 4px;
+
+// - gridName - width - ratioList - gutterWidth - backgroundColor - //
+
+@include createFloatGrid("myGrid1",100%,"1/2 1/2",$gw,lightblue);
+@include createFloatGrid("myGrid2",100%,"1/4 1/4 1/4 1/4",$gw,lightyellow);
+@include createFloatGrid("myGrid3",100%,"1/8 1/8 1/8 1/8 1/8 1/8 1/8 1/8",$gw,lightsalmon);
+@include createFloatGrid("myGrid4",100%,"1/12 1/12 1/12 1/12 1/12 1/12 1/12 1/12 1/12 1/12 1/12 1/12",$gw,lightpink);
+@include createFloatGrid("myGrid5",100%,"2/4 1/4 1/4",$gw,rgb(231, 198, 198));
+@include createFloatGrid("myGrid6",100%,"1/4 2/4 1/4",$gw,rgb(238, 145, 222));
+@include createFloatGrid("myGrid7",100%,"2/8 1/8 2/8 1/8 2/8",$gw,lightblue);
+
+
+//------------------------------------------------
+
+
+
+// extra fun snippet to use with the above!: 
+
+// HTML column generator:
+//  1) input your grid/row name
+//  2) press left arrow, right arrow (I'm a hacker, you?)
+//  3) tab, enter number of columns
+//  4) press enter and be astounded.
+
+// "Create Row" : {
+//     "prefix" : "cr",
+//     "body" : ".${1}>.${1}-col$.${1}-columnItem*$0"
+// }
+
+
+
+
+  
