@@ -21,12 +21,17 @@
     $ratios : str-split($divisionList," ");
 
     // class for container
+    //  - set width
+    //  - apply clearfix mixin
     .#{$gridName}{
         width : $width;
         @include clearfix();
     }
 
     // styles that apply to ALL columns of grid
+    //  - apply left and right margins
+    //  - float left;
+    //  - apply "testColumn" mixin
     .#{$gridName}-columnItem{
         margin-left : $gutterWidth/2;
         margin-right : $gutterWidth/2;
@@ -48,6 +53,7 @@
     $i : 1;
     // the number of columns is the length of the array of ratios we provide as a string
     $numColumns : length($ratios);
+
     // for every ratio in our list of ratios
     @each $ratio in $ratios{
         // create a CSS class called $gridName-col{$i}
@@ -64,7 +70,7 @@
         .#{$gridName}-col#{$i}:hover{
             background-color : grey;
         }
-
+        //increment our counter
         $i : $i+1;
     }
 }
